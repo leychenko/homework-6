@@ -1,0 +1,238 @@
+/* &display=swap */
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap);
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 15px;
+}
+/* ========================================================= */
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.cards__column {
+  flex: 0 1 33.333%;
+  padding: 0 15px;
+}
+.cards__item {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	min-height: 100%;
+  box-shadow: 0 0 12px 2px grey;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+  background-color: #fff;
+}
+.cards__column:hover .cards__item {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px 2px grey;
+}
+.cards__column:hover .cards__head {
+  background-color: rgb(216, 99, 4);
+}
+.cards__column:hover .title-triangle{
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid rgb(216, 99, 4);
+}
+.cards__body {
+	/* padding: 15px 15px 25px 15px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	flex-grow: 1;
+	min-height: 100%;
+  position: relative;
+}
+.cards__head {
+  align-self: stretch;
+  text-align: center;
+  background-color: blue;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 15px;
+  letter-spacing: 1px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+}
+.title{
+	font-weight: 700;
+	font-size: 30px;
+  text-transform: uppercase;
+}
+.title-triangle{
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -10px;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid blue;
+}
+.cards__content {
+  font-size: 15px;
+  padding: 0 15px;
+  flex-grow: 1;
+}
+.content__span{
+	display: flex;
+	align-items: flex-end;
+	font-size: 12px;
+	font-weight: 700;
+	padding-top: 5px;
+}
+.content__span::before{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:url(../image/star.jpg)0 0 / 20px 20px no-repeat;
+}
+
+.cards__price {
+	max-width: 130px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.cards__price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+}
+.cards__price-block::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  opacity: 0.6;
+  position: absolute;
+  top: 11px;
+  left: 0;
+  z-index: 1;
+}
+.cards__price-block::after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: grey;
+	opacity: 0.3;
+}
+.price-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.cards__block-info{
+	background-color: rgba(128, 128, 128, 0.438);
+	padding: 20px 20px 25px 20px;
+	position: relative;
+}
+.cards__info {
+  max-width: 200px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+.cards__decor-blue{
+	max-width: 40px;
+	text-align: center;
+	border-radius: 3px;
+	padding: 5px;
+	color: #fff;
+	background-color:blue;
+	position: relative;
+}
+.blue-square{
+	position: absolute;
+	top: -20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 5;
+}
+.blue-square__triangle{
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 8px solid blue;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+}
+.cards__column:hover .blue-square{
+	background-color: rgb(216, 5, 5);
+}
+.cards__column:hover .blue-square__triangle{
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 8px solid rgb(216, 5, 5);
+}
+.cards__decor{
+	width: 0;
+	height: 0;
+	border-left: 110px solid transparent;
+	border-right: 110px solid transparent;
+	border-top: 30px solid rgba(128, 128, 128, 0.438);
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+}
+.cards__action{
+	padding: 20px;
+}
+.cards__info span {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.cards__button {
+  background-color: rgba(47, 184, 5, 0.849);
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  box-shadow: 0 0 4px 1px grey;
+}
+.cards__button:hover{
+	background-color: rgba(47, 184, 5, 0.76);
+	box-shadow: 0 0 5px 1px grey;
+}
+.cards__button:active{
+	box-shadow: none;
+}
+
+
